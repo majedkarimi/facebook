@@ -53,6 +53,36 @@ body {
   margin-right: 10px;
 }
 
+#header .main-header .logo-header .arrow-back-header {
+  display: none;
+}
+
+#header .main-header .logo-header .arrow-back-header #head-arrow {
+  margin: 9px 9px;
+  color: #aaa;
+  border-radius: 50px;
+  font-size: 36px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+#header .main-header .logo-header .arrow-back-header #head-arrow:hover {
+  background: #3a3b3d;
+}
+
 #header .main-header .logo-header .search {
   position: relative;
   padding: 9PX 0;

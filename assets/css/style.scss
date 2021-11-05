@@ -20,6 +20,7 @@ $color-bg-textbox:rgba(75, 76, 80, 255);
 $color-hover:rgba(78, 79, 81, 255);
 $color-hover2:rgba(78, 79, 81, 255);
 $color-searchbox:rgba(58, 59, 61, 255);
+$font:.9375rem;
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -39,7 +40,6 @@ body {
 --------------------------------------------------*/
 #header {
     background-color: $color-bg-header;
-    // padding: 4px;
     color: $color-text;
     position: fixed;
     width: 100%;
@@ -53,12 +53,34 @@ body {
 
             figure {
                 padding: 7px 0;
+                
 
                 img {
                     width: 40px;
                     margin-right: 10px;
                 }
             }
+            .arrow-back-header{
+                display: none;
+                #head-arrow {
+                    margin: 9px 9px;
+                    color: #aaa;
+                    border-radius: 50px;
+                    font-size: 36px;
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all .2s ease-in-out;
+                    cursor: pointer;
+                    &:hover{
+                        background: $color-searchbox;
+                    }                    
+                }
+            }
+
 
             .search {
 
@@ -82,7 +104,8 @@ body {
                     width: 100%;
                     color: $color-text;
                     font-size: .9375rem;
-                    &:focus{
+
+                    &:focus {
                         border: 0;
                         outline: none;
                     }

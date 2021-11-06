@@ -9,6 +9,7 @@ $(document).ready(function(){
     const logofacebook =$('.logo-header figure');
     const iconSerch =$('.search .bi-search');
     const inputSerchHeader =$('.logo-header .search input');
+    const boxRecentSearch = $('.recent-search');
     // click input search
     boxSearch.click(function(){
         logofacebook.hide(250);
@@ -18,6 +19,7 @@ $(document).ready(function(){
             'transition' : 'all .5s'
         },1000);
         arrowBacksearch.show(250);
+        boxRecentSearch.fadeIn(250);
 
     });
     // click Arrow back
@@ -29,5 +31,6 @@ $(document).ready(function(){
             'transition' : 'all .5s'
         },1000);
         arrowBacksearch.hide(250);
+        boxRecentSearch.fadeOut(250);
     });
 });

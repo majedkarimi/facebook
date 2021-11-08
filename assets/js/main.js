@@ -3,15 +3,17 @@
 /*--------------------------------------------- 
     # code hedaer part Arrow back and logo
 ----------------------------------------------*/
+
+const arrowBacksearch = $('.arrow-back-header');
+const boxSearch = $('.logo-header .search');
+const logofacebook = $('.logo-header figure');
+const iconSerch = $('.search .bi-search');
+const inputSerchHeader = $('.logo-header .search input');
+const boxRecentSearch = $('.recent-search');
+const body = $('body');
+const boxLogoSearch = $('.logo-header');
+// Jquery
 $(document).ready(function () {
-    const arrowBacksearch = $('.arrow-back-header');
-    const boxSearch = $('.logo-header .search');
-    const logofacebook = $('.logo-header figure');
-    const iconSerch = $('.search .bi-search');
-    const inputSerchHeader = $('.logo-header .search input');
-    const boxRecentSearch = $('.recent-search');
-    const body = $('body');
-    const boxLogoSearch = $('.logo-header');
     // click input search
     boxSearch.click(function () {
         logofacebook.hide(250);

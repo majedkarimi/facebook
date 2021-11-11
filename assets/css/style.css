@@ -21,6 +21,11 @@ body {
   padding-right: 15px;
 }
 
+.active-btn {
+  background-color: #263951 !important;
+  color: #2e89ff !important;
+}
+
 /*-------------------------------------------------
     # heeder
 --------------------------------------------------*/
@@ -226,6 +231,12 @@ body {
   font-size: 24px;
   color: #e4e6eb;
   margin-right: 11px;
+  position: relative;
+}
+
+#header .main-header .home-header a:hover span {
+  opacity: 1;
+  visibility: visible;
 }
 
 #header .main-header .home-header a:hover {
@@ -234,6 +245,32 @@ body {
 
 #header .main-header .home-header a i {
   padding: unset;
+}
+
+#header .main-header .home-header a span {
+  position: absolute;
+  padding: 8px 14px;
+  color: #3b3b3b;
+  background: #d6d7d8;
+  border-radius: 10px;
+  font-size: 13px;
+  left: 20px;
+  top: 58px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  z-index: 9999;
+}
+
+#header .main-header .home-header a span:hover {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#header .main-header .home-header a .tooltip {
+  left: 20px;
+  top: 56px;
 }
 
 #header .main-header .home-header .active {
@@ -268,6 +305,12 @@ body {
 #header .main-header .sign-header ul li a {
   color: #e4e6eb;
   text-decoration: none;
+  position: relative;
+}
+
+#header .main-header .sign-header ul li a:hover .tooltip-de {
+  opacity: 1;
+  visibility: visible;
 }
 
 #header .main-header .sign-header ul li a i {
@@ -293,7 +336,33 @@ body {
   background: #4e4f51;
 }
 
-#header .main-header .sign-header .friend {
+#header .main-header .sign-header ul li a .tooltip-de {
+  position: absolute;
+  padding: 8px 14px;
+  color: #3b3b3b;
+  background: #d6d7d8;
+  border-radius: 10px;
+  font-size: 13px;
+  left: -7px;
+  top: 44px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  z-index: 9999;
+}
+
+#header .main-header .sign-header ul li a .tooltip-de:hover {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#header .main-header .sign-header ul li a .tooltip {
+  left: -16px;
+  top: 51px;
+}
+
+#header .main-header .sign-header ul .friend {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,7 +374,7 @@ body {
           align-items: center;
 }
 
-#header .main-header .sign-header .friend a {
+#header .main-header .sign-header ul .friend a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,11 +393,11 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
-#header .main-header .sign-header .friend a:hover {
+#header .main-header .sign-header ul .friend a:hover {
   background-color: #4e4f51;
 }
 
-#header .main-header .sign-header .person {
+#header .main-header .sign-header ul .person {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,7 +410,7 @@ body {
   margin-right: 14px;
 }
 
-#header .main-header .sign-header .person a {
+#header .main-header .sign-header ul .person a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,13 +428,153 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
-#header .main-header .sign-header .person a:hover {
+#header .main-header .sign-header ul .person a:hover {
   background-color: #3a3b3d;
 }
 
-#header .main-header .sign-header .person a img {
+#header .main-header .sign-header ul .person a img {
   width: 28px;
   border-radius: 50px;
   margin-right: 4px;
+}
+
+#header .main-header .sign-header ul .sub-account {
+  position: relative;
+}
+
+#header .main-header .sign-header ul .sub-account ul {
+  position: absolute;
+  background: #242527;
+  width: 356px;
+  top: 50px;
+  right: 0px;
+  padding: 7px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+#header .main-header .sign-header ul .sub-account ul .profile {
+  display: block;
+  margin-top: 7px;
+  margin: unset;
+  border-bottom: 1px solid #393a3c;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+#header .main-header .sign-header ul .sub-account ul .profile a {
+  display: inline-block;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 6px;
+}
+
+#header .main-header .sign-header ul .sub-account ul .profile a:hover {
+  background: #3a3b3d;
+}
+
+#header .main-header .sign-header ul .sub-account ul .profile a img {
+  float: left;
+  border-radius: 50px;
+  margin-right: 8px;
+  width: 65px;
+}
+
+#header .main-header .sign-header ul .sub-account ul .profile a p {
+  display: table;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+#header .main-header .sign-header ul .sub-account ul .profile a span {
+  color: #aaa;
+  font-size: 13px;
+}
+
+#header .main-header .sign-header ul .sub-account ul .feedback {
+  margin: unset;
+  border-bottom: 1px solid #393a3c;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+#header .main-header .sign-header ul .sub-account ul .feedback a {
+  display: block;
+  border-radius: 5px;
+  padding: 5px 0px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 8px 6px;
+}
+
+#header .main-header .sign-header ul .sub-account ul .feedback a:hover {
+  background: #3a3b3d;
+}
+
+#header .main-header .sign-header ul .sub-account ul .feedback a i {
+  float: left;
+  margin-right: 8px;
+  font-size: 24px;
+  background-color: #4e4f51;
+}
+
+#header .main-header .sign-header ul .sub-account ul .feedback a p {
+  font-weight: 600;
+}
+
+#header .main-header .sign-header ul .sub-account ul .feedback a span {
+  color: #aaa;
+  font-size: 13px;
+}
+
+#header .main-header .sign-header ul .sub-account ul .setting {
+  margin: unset;
+}
+
+#header .main-header .sign-header ul .sub-account ul .setting a {
+  padding: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 8px 6px;
+  border-radius: 5px;
+}
+
+#header .main-header .sign-header ul .sub-account ul .setting a:hover {
+  background-color: #3a3b3d;
+}
+
+#header .main-header .sign-header ul .sub-account ul .setting a span {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 11px;
+  font-weight: 500;
+}
+
+#header .main-header .sign-header ul .sub-account ul .setting a i {
+  font-size: 22px;
+  background-color: #4e4f51;
+}
+
+#header .main-header .sign-header ul .sub-account ul .setting a .bi-arrow-right-short {
+  background-color: unset;
 }
 /*# sourceMappingURL=style.css.map */

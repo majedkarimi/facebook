@@ -44,3 +44,15 @@ $(document).ready(function () {
         });
     });
 });
+/*--------------------------------------------- 
+    # code hedaer account
+----------------------------------------------*/
+const btnAccount = $('.sub-account');
+const boxSubAccount = $('.sub-account ul');
+const iconAccount=$('.sub-account .bi-caret-down-fill');
+$(document).ready(function(){
+    btnAccount.click(function(){
+        boxSubAccount.fadeToggle(200);
+        iconAccount.toggleClass('active-btn');
+    });
+});

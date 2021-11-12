@@ -42,7 +42,19 @@ body {
    background-color: #263951 !important;
     color: $color-bg-active !important;
 }
-
+.hide-fade{
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.show-fade{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all .4s ease-in-out !important;
+}
+.hidden{
+    display: none !important;
+}
 /*-------------------------------------------------
     # heeder
 --------------------------------------------------*/
@@ -65,6 +77,7 @@ body {
 
             figure {
                 padding: 7px 0;
+                transition: all .4s ease-in-out;
 
 
                 img {
@@ -74,7 +87,7 @@ body {
             }
 
             .arrow-back-header {
-                display: none;
+                // display: none;
 
                 #head-arrow {
                     margin: 9px 9px;
@@ -135,7 +148,7 @@ body {
                 width: 27%;
                 box-shadow: 0px 0px 18px 11px rgba(0, 0, 0, .1);
                 color: $color-text;
-                display: none;
+                // display: none;
 
                 .title-section {
                     padding: unset;
@@ -402,7 +415,7 @@ body {
                         padding: 7px;
                         justify-content: flex-start;
                         flex-direction: column;
-                        display: none;
+                        // display: none;
 
                         .profile {
                             display: block;

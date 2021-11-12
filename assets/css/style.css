@@ -26,6 +26,24 @@ body {
   color: #2e89ff !important;
 }
 
+.hide-fade {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.show-fade {
+  visibility: visible !important;
+  opacity: 1 !important;
+  -webkit-transition: all .4s ease-in-out !important;
+  transition: all .4s ease-in-out !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
 /*-------------------------------------------------
     # heeder
 --------------------------------------------------*/
@@ -59,15 +77,13 @@ body {
 
 #header .main-header .logo-header figure {
   padding: 7px 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 #header .main-header .logo-header figure img {
   width: 40px;
   margin-right: 10px;
-}
-
-#header .main-header .logo-header .arrow-back-header {
-  display: none;
 }
 
 #header .main-header .logo-header .arrow-back-header #head-arrow {
@@ -134,7 +150,6 @@ body {
   -webkit-box-shadow: 0px 0px 18px 11px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 18px 11px rgba(0, 0, 0, 0.1);
   color: #e4e6eb;
-  display: none;
 }
 
 #header .main-header .logo-header .recent-search .title-section {
@@ -456,7 +471,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  display: none;
 }
 
 #header .main-header .sign-header ul .sub-account ul .profile {

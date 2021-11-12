@@ -3,56 +3,32 @@
 /*--------------------------------------------- 
     # code hedaer part Arrow back and logo
 ----------------------------------------------*/
+const arrowBacksearch = document.querySelector('.arrow-back-header');
+const boxSearch = document.querySelector('.logo-header .search');
+const logofacebook = document.querySelector('.logo-header figure');
+const iconSerch = document.querySelector('.search .bi-search');
+const inputSerchHeader = document.querySelector('.logo-header .search input');
+const boxRecentSearch = document.querySelector('.recent-search');
+const body = document.querySelector('body');
+const boxLogoSearch = document.querySelector('.logo-header');
 
-const arrowBacksearch = $('.arrow-back-header');
-const boxSearch = $('.logo-header .search');
-const logofacebook = $('.logo-header figure');
-const iconSerch = $('.search .bi-search');
-const inputSerchHeader = $('.logo-header .search input');
-const boxRecentSearch = $('.recent-search');
-const body = $('body');
-const boxLogoSearch = $('.logo-header');
-// Jquery
-$(document).ready(function () {
-    // click input search
-    boxSearch.click(function () {
-        logofacebook.hide(250);
-        iconSerch.hide(250);
-        inputSerchHeader.css({
-            'padding': '0px 15px',
-            'transition': 'all .5s'
-        }, 1000);
-        arrowBacksearch.show(250);
-        boxRecentSearch.fadeIn(250);
-        boxLogoSearch.css({
-            'boxShadow': '0px 0px 18px 11px rgba(0, 0, 0, .1)'
-        });
-
-    });
-    // click Arrow back
-    arrowBacksearch.click(function () {
-        logofacebook.show(250);
-        iconSerch.show(250);
-        inputSerchHeader.css({
-            'padding': '0px 0px 0px 40px',
-            'transition': 'all .5s'
-        }, 1000);
-        arrowBacksearch.hide(250);
-        boxRecentSearch.fadeOut(250);
-        boxLogoSearch.css({
-            'boxShadow': 'unset'
-        });
-    });
+boxSearch.addEventListener('click',function(){
+    logofacebook.classList.add('hidden');
+    boxRecentSearch.classList.remove('hidden');
+    arrowBacksearch.classList.remove('hidden')
 });
-/*--------------------------------------------- 
-    # code hedaer account
-----------------------------------------------*/
-const btnAccount = $('.sub-account');
-const boxSubAccount = $('.sub-account ul');
-const iconAccount=$('.sub-account .bi-caret-down-fill');
-$(document).ready(function(){
-    btnAccount.click(function(){
-        boxSubAccount.fadeToggle(200);
-        iconAccount.toggleClass('active-btn');
-    });
+arrowBacksearch.addEventListener('click',function(){
+    boxRecentSearch.classList.add('hidden');
+    logofacebook.classList.remove('hidden');
+    arrowBacksearch.classList.add('hidden');
+});
+// /*--------------------------------------------- 
+//     # code hedaer account
+// ----------------------------------------------*/
+const btnAccount = document.querySelector('.sub-account');
+const boxSubAccount = document.querySelector('.sub-account ul');
+const iconAccount=document.querySelector('.sub-account .bi-caret-down-fill');
+btnAccount.addEventListener('click',function(){
+    boxSubAccount.classList.toggle('hidden');
+    iconAccount.classList.toggle('active-btn');
 });
